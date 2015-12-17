@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 3afae3c01d3dd0647938405a0db8f2eb
+timeCreated: 1448662199
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Head01
+    100002: Head01Tip
+    100004: Hip_Bone
+    100006: L_Ankle
+    100008: L_Collarbone
+    100010: L_Elbow
+    100012: L_Hand
+    100014: L_Hand_Tip
+    100016: L_Hip
+    100018: L_Knee
+    100020: L_Shoulder
+    100022: L_Tip
+    100024: L_Wrist
+    100026: Neck01
+    100028: //RootNode
+    100030: R_Ankle
+    100032: R_Collarbone
+    100034: R_Elbow
+    100036: R_Hand
+    100038: R_Hand_Tip
+    100040: R_Hip
+    100042: R_Knee
+    100044: R_Shoulder
+    100046: R_Tip
+    100048: R_Wrist
+    100050: Skater
+    100052: Spine01
+    100054: Spine02
+    100056: Spine03
+    100058: Stick
+    400000: Head01
+    400002: Head01Tip
+    400004: Hip_Bone
+    400006: L_Ankle
+    400008: L_Collarbone
+    400010: L_Elbow
+    400012: L_Hand
+    400014: L_Hand_Tip
+    400016: L_Hip
+    400018: L_Knee
+    400020: L_Shoulder
+    400022: L_Tip
+    400024: L_Wrist
+    400026: Neck01
+    400028: //RootNode
+    400030: R_Ankle
+    400032: R_Collarbone
+    400034: R_Elbow
+    400036: R_Hand
+    400038: R_Hand_Tip
+    400040: R_Hip
+    400042: R_Knee
+    400044: R_Shoulder
+    400046: R_Tip
+    400048: R_Wrist
+    400050: Skater
+    400052: Spine01
+    400054: Spine02
+    400056: Spine03
+    400058: Stick
+    2300000: Stick
+    3300000: Stick
+    4300000: Skater
+    4300002: Stick
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Skater
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
