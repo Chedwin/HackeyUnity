@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 119c836d6a805d744a55eccba8cdd137
+timeCreated: 1443699928
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Hip_Bone
+    100004: L_Collarbone
+    100006: L_Elbow
+    100008: L_Hand
+    100010: L_Hand_Tip
+    100012: L_Shoulder
+    100014: L_Wrist
+    100016: Neck01
+    100018: Spine01
+    100020: Spine02
+    100022: Spine03
+    100024: Stick
+    400000: //RootNode
+    400002: Hip_Bone
+    400004: L_Collarbone
+    400006: L_Elbow
+    400008: L_Hand
+    400010: L_Hand_Tip
+    400012: L_Shoulder
+    400014: L_Wrist
+    400016: Neck01
+    400018: Spine01
+    400020: Spine02
+    400022: Spine03
+    400024: Stick
+    2300000: Stick
+    3300000: Stick
+    4300000: Stick
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Hip_Bone
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine03
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Collarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Wrist
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: StickModel(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Hip_Bone
+      position: {x: -.00526260305, y: .138065234, z: .00249373796}
+      rotation: {x: .719889104, y: -.639479935, z: -.155201197, w: -.220766112}
+      scale: {x: 1, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: Spine01
+      position: {x: -.0254769064, y: 7.50331537e-06, z: .00333035202}
+      rotation: {x: .035265509, y: .024156848, z: .000385940104, w: .999085903}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine02
+      position: {x: -.0235637538, y: 2.3305506e-17, z: .00138764665}
+      rotation: {x: .0350919999, y: -.0312352143, z: .00230328809, w: .998893201}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine03
+      position: {x: -.0206325501, y: -4.25177859e-05, z: .000164477256}
+      rotation: {x: .999009848, y: .00293415738, z: -.0321103893, w: -.0306567438}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Neck01
+      position: {x: -.0191726349, y: .000133299298, z: -.000228444376}
+      rotation: {x: -.00532436324, y: .0314325839, z: -.0135625852, w: .999399662}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Collarbone
+      position: {x: -.00571782934, y: -.00892912596, z: .0207180716}
+      rotation: {x: .231246948, y: .00893857889, z: -.724581838, w: .649173439}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Shoulder
+      position: {x: .0203509293, y: .00404699985, z: .00615107687}
+      rotation: {x: .142433941, y: -.33774668, z: -.391334891, w: .84409529}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Elbow
+      position: {x: .0239200294, y: .036293, z: -.00670487154}
+      rotation: {x: .0437815823, y: .0857464373, z: .492898554, w: .864743769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Wrist
+      position: {x: .0145486398, y: -.000445928104, z: -3.20096224e-05}
+      rotation: {x: -.0284569431, y: -.237684429, z: -.044905141, w: .969886541}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Hand
+      position: {x: .0145485923, y: 8.26017349e-05, z: .0041102604}
+      rotation: {x: .745332062, y: -.460105389, z: -.140983477, w: -.461418271}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Hand_Tip
+      position: {x: .0206061602, y: .00164637051, z: -.0040427912}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Stick
+      position: {x: -.000756750116, y: .0048814225, z: -.00122000219}
+      rotation: {x: .196172327, y: .151171997, z: .768122137, w: .590467453}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: f85565177cfac4fdda360788f24338bf
+timeCreated: 1446681109
+=======
+guid: e22d118a0f0589d4fb849a8daa1981ac
+timeCreated: 1446681128
+>>>>>>> origin/EdwinBranch
+=======
+guid: e22d118a0f0589d4fb849a8daa1981ac
+timeCreated: 1446681128
+>>>>>>> origin/EdwinBranch
+=======
+guid: e22d118a0f0589d4fb849a8daa1981ac
+timeCreated: 1446681128
+>>>>>>> origin/EdwinBranch
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 2
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames: []
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
