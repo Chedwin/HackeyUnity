@@ -15,6 +15,9 @@ public class LevelProgress : MonoBehaviour {
 	public int levelProgressScore = 10000;
 	public int minEnemyCount = 50;
 
+	public GameObject enemyCar;
+	public Transform carSpawn;
+
 	public GameObject levelTimerImage;
 	public Text levelTimerText;
 
@@ -31,7 +34,6 @@ public class LevelProgress : MonoBehaviour {
 	GameObject sEnmManger;
 	Montreal_Enemy_Manager mtlManager;
 
-	GameObject enemyCar;
 	Car_Enemy_Health enemyCarScriptRef;
 	
 	Animator playerAnim;
@@ -45,7 +47,6 @@ public class LevelProgress : MonoBehaviour {
 		mtlManager = GetComponent<Montreal_Enemy_Manager> ();
 		mtlManager.enabled = false;
 
-		enemyCar = GameObject.Find ("EnemyCar");
 
 		championsAudio = GetComponent<AudioSource> ();
 		backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
@@ -61,11 +62,12 @@ public class LevelProgress : MonoBehaviour {
 		gameStage = GAMESTAGE.ENEMIES;
 
 		sEnmManger.SetActive (true);
-		enemyCar.SetActive (false);
 
 		levelTimerImage.SetActive (false);
 
 		finishedGame = false;
+
+		Time.timeScale = 1.0f;
 	}
 	
 	// Update is called once per frame
@@ -100,7 +102,6 @@ public class LevelProgress : MonoBehaviour {
 			mtlManager.enabled = true;
 			gameStage = GAMESTAGE.MTL;
 			playerAnim.SetTrigger("Celebrate");
-//			Debug.Log ("Next stage: MTL");
 			levelTimerImage.SetActive (true);
 		}
 	}
@@ -121,7 +122,8 @@ public class LevelProgress : MonoBehaviour {
 
 		if (Montreal_Enemy_Manager.mtlPlayerCount == 0) {
 			mtlManager.enabled = false;
-			enemyCar.SetActive (true);
+			//enemyCar.SetActive (true);
+			Instantiate (enemyCar, carSpawn.position, Quaternion.identity);
 
 			gameStage = GAMESTAGE.CAR;
 			playerAnim.SetTrigger ("Celebrate");
@@ -137,6 +139,7 @@ public class LevelProgress : MonoBehaviour {
 	}
 
 	void CarStage() {
+		//sEnmManger.SetActive (true);
 		gameOverTimer += Time.deltaTime;
 
 		float timeLeft = gameOverTimeLimit - gameOverTimer;
