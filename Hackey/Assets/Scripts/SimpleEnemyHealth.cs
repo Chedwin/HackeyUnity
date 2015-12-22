@@ -9,6 +9,7 @@ public class SimpleEnemyHealth : MonoBehaviour {
 	public GameObject healthDrop;
 	public GameObject gpDrop;
 	public GameObject flamingPuckDrop;
+	public GameObject klefbombDrop;
 
 	public static int scoreValue = 10;
 	HockeyPlayerAttack playerAttack;
@@ -55,7 +56,7 @@ public class SimpleEnemyHealth : MonoBehaviour {
 		}
 	}
 
-	void Death() {
+	public void Death() {
 		isDead = true;
 		capsuleCollider.isTrigger = true;
 		anim.SetTrigger ("Dies");
@@ -85,18 +86,24 @@ public class SimpleEnemyHealth : MonoBehaviour {
 			anim.SetTrigger("Hit");
 			TakeDamage((int)AttackDamageValue.MELEE);
 		}
+
+		if (c.gameObject.tag == "EnemyCar") {
+			Death ();
+		}
 	}
 
 	IEnumerator Drop() {
 		int random = Random.Range (0, 100);
 		Vector3 heightOffset = new Vector3 (0, 2.0f, 0.0f);
 
-		if ((0 <= random) && (random <= 30)) {
+		if ((0 <= random) && (random <= 20)) {
 			Instantiate (healthDrop, transform.position + heightOffset, Quaternion.identity);
-		} else if ((30 < random) && (random <= 50)) {
+		} else if ((30 < random) && (random <= 40)) {
 			Instantiate (flamingPuckDrop, transform.position + heightOffset, Quaternion.identity);
-		} else if ((50 < random) && (random <= 55)) {
+		} else if ((50 < random) && (random <= 60)) {
 			Instantiate (gpDrop, transform.position + heightOffset, Quaternion.identity);
+		} else if ((70 < random) && (random <= 75)) {
+			Instantiate (klefbombDrop, transform.position + heightOffset, Quaternion.identity);
 		}
 
 		yield return new WaitForSeconds (2);

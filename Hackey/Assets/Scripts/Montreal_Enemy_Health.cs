@@ -13,7 +13,7 @@ public class Montreal_Enemy_Health : MonoBehaviour {
 
 	public int mtlStartingHealth = 1000;
 	public int mtlCurrentHealth;
-	public int scoreValue = 2000;
+	public static int scoreValue = 2000;
 
 	MTLHEALTHSTATE mtlHealthState;
 	HockeyPlayerAttack playerAttack;
@@ -55,7 +55,8 @@ public class Montreal_Enemy_Health : MonoBehaviour {
 		playerAnim.SetTrigger ("Celebrate");
 		StartCoroutine ("Drop");
 		Montreal_Enemy_Manager.mtlPlayerCount--;
-		Destroy (gameObject, 1.0f);
+		ScoreSystem.playerScore += scoreValue;
+		Destroy (gameObject);
 	}
 
 	void OnCollisionEnter(Collision c) {
