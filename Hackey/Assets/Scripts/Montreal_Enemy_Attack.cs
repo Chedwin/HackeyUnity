@@ -13,7 +13,7 @@ public class Montreal_Enemy_Attack : MonoBehaviour {
 	Animator anim;
 	NavMeshAgent mtlNav;
 
-	public float timeBetweenPucks = 3.0f;
+	public float timeBetweenPucks = 1.5f;
 	float timer;
 
 	public Transform puckSpawnPoint;
@@ -25,7 +25,7 @@ public class Montreal_Enemy_Attack : MonoBehaviour {
 	public float maxRange;
 	public float minRange = 2.0f;
 
-	public float speed = 6.0f;
+	public float speed = 12.0f;
 
 	Vector3 playerTarget;
 
@@ -47,15 +47,11 @@ public class Montreal_Enemy_Attack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (playerTarget == null) 
+		if (playerTarget == null) {
 			return;
+		}
 
 		transform.LookAt(player.transform);
-//		float distance = Vector3.Distance(transform.position, playerTarget);
-//		bool tooClose = distance < minRange;
-//		Vector3 direction = tooClose ? Vector3.back : Vector3.forward;
-//		transform.Translate(direction * Time.deltaTime);
-//		anim.SetFloat ("Speed", speed);
 		timer += Time.deltaTime;
 
 		switch (mtlState) {
@@ -74,16 +70,20 @@ public class Montreal_Enemy_Attack : MonoBehaviour {
 	void Chase() {
 		mtlNav.SetDestination (player.transform.position);
 		anim.SetFloat ("Speed", speed);
+		mtlNav.speed = speed;
 	}
 
 	void Attack() {
 		anim.SetFloat ("Speed", 0.0f);
+		mtlNav.speed = 0.01f;
 
 		if (playerHealth.currentHealth >= 0) {
 			if (timer >= timeBetweenPucks) {
 				Shoot ();
 			}
-		} else {
+		} 
+
+		if (playerHealth.currentHealth <= 0) {
 			mtlState = MTLSTATE.CELEBRATE;
 		}
 

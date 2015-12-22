@@ -17,9 +17,7 @@ public class KlefBombPuckProjectile : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		if ( (timer >= 0.2f) && (c.gameObject.tag != "Environment") && 
-		    (c.gameObject.tag != "Manager") && (c.gameObject.tag != "Player") ) 
-		{
+		if ( (timer >= 0.2f)) {
 			Instantiate (klefbombExplosion, gameObject.transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}

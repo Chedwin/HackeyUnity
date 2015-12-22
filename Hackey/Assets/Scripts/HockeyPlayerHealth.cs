@@ -36,7 +36,7 @@ public class HockeyPlayerHealth : MonoBehaviour {
 
 	HealthState playerHealthState;
 
-	bool isDead;
+	public bool isDead;
 	bool damaged;
 	bool healed;
 
@@ -126,13 +126,13 @@ public class HockeyPlayerHealth : MonoBehaviour {
 			TakeDamage(eP);
 		}
 
-		if (c.gameObject.name == "EnemyCar") {
+		if (c.gameObject.tag == "EnemyCar") {
 			TakeDamage(Car_Enemy_AI.carDamageValue);
 		}
 	}
 
 	IEnumerator GameOver() {
-		yield return new WaitForSeconds(14.0f);
+		yield return new WaitForSeconds(7.0f);
 		Application.LoadLevel ("GameOver");
 	}
 }

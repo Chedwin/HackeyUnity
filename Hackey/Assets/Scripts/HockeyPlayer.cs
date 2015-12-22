@@ -4,8 +4,7 @@ using System.Collections;
 //[RequireComponent(typeof(CharacterController))]
 public class HockeyPlayer : MonoBehaviour {
 
-	public float speed = 6.0f;
-	public float sprintSpeed = 1.0f;
+	public float sprintSpeed = 0.333f;
 
 	Animator anim;
 	Rigidbody playerBody;
@@ -17,7 +16,7 @@ public class HockeyPlayer : MonoBehaviour {
 
 	void FixedUpdate() {
 		float h = Input.GetAxis ("Horizontal") * 0.5f;
-		float v = Input.GetAxis("Vertical") * 0.75f;
+		float v = Input.GetAxis("Vertical") * 0.5f;
 		bool sprint = Input.GetButton ("Sprint");
 
 		Move (h, v, sprint);
@@ -37,7 +36,7 @@ public class HockeyPlayer : MonoBehaviour {
 
 	void Animating(float v, bool sprint) {
 		if (sprint) {
-			anim.SetFloat("Speed", sprintSpeed);
+			anim.SetFloat("Speed", 9.0f);
 		} else {
 			anim.SetFloat ("Speed", v);
 		}

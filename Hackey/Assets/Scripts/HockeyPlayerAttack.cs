@@ -10,7 +10,8 @@ public enum AttackDamageValue {
 
 public enum PuckState {
 	NORMAL,
-	FLAMING
+	FLAMING,
+	KLEFBOMB
 };
 
 public class HockeyPlayerAttack : MonoBehaviour {
@@ -24,12 +25,16 @@ public class HockeyPlayerAttack : MonoBehaviour {
 	public float range = 50.0f;
 
 	public GameObject puck;
+	public GameObject klefbombPuck;
+
 	public PuckState puckState;
 
 	public Text flamingPuckTimerText;
 
 	float flamingPuckTimer;
 	float flamingPuckTimeLimit = 31.0f;
+
+	float klefbombTimer;
 
 	float timer;
 	Animator anim;
@@ -73,6 +78,9 @@ public class HockeyPlayerAttack : MonoBehaviour {
 		if (puckState == PuckState.FLAMING) {
 			FlamingPuckTimer();
 		}
+		else if (puckState == PuckState.KLEFBOMB) {
+			KlefbombTimer ();
+		}
 	}
 
 	void FlamingPuckTimer() {
@@ -87,6 +95,23 @@ public class HockeyPlayerAttack : MonoBehaviour {
 		if (flamingPuckTimer >= flamingPuckTimeLimit) {
 			puckState = PuckState.NORMAL;
 			flamingPuckTimer = 0.0f;
+			flamingPuckTimerText.text = "";
+			flamingPuckTimerText.color = Color.white;
+		}
+	}
+
+	void KlefbombTimer() {
+		klefbombTimer += Time.deltaTime;
+		int timeLeft = (int)(flamingPuckTimeLimit - klefbombTimer);
+
+		flamingPuckTimerText.text = timeLeft + " UNLEASH THE KLEFBOMB!";
+		if (timeLeft <= 10) {
+			flamingPuckTimerText.color = Color.red;
+		}
+
+		if (klefbombTimer >= flamingPuckTimeLimit) {
+			puckState = PuckState.NORMAL;
+			klefbombTimer = 0.0f;
 			flamingPuckTimerText.text = "";
 			flamingPuckTimerText.color = Color.white;
 		}
@@ -109,8 +134,14 @@ public class HockeyPlayerAttack : MonoBehaviour {
 	void ShootPuck() {
 	
 		Vector3 shootDestination = (target.position - puckSpawnPoint.position).normalized;
-		GameObject tempPuck = Instantiate (puck, puckSpawnPoint.position, transform.rotation) as GameObject;
-		tempPuck.GetComponent<Rigidbody> ().AddForce (shootDestination * 40.0f, ForceMode.Impulse);
+
+		if (puckState != PuckState.KLEFBOMB) {
+			GameObject tempPuck = Instantiate (puck, puckSpawnPoint.position, transform.rotation) as GameObject;
+			tempPuck.GetComponent<Rigidbody> ().AddForce (shootDestination * 40.0f, ForceMode.Impulse);
+		} else {
+			GameObject tempPuck2 = Instantiate (klefbombPuck, puckSpawnPoint.position, transform.rotation) as GameObject;
+			tempPuck2.GetComponent<Rigidbody> ().AddForce (shootDestination * 60.0f, ForceMode.Impulse);
+		}
 	
 	} // end ShootPuck()
 

@@ -38,7 +38,7 @@ public class Car_Enemy_Health : MonoBehaviour {
 			}
 		}
 
-		if (c.gameObject.name == "EnemyCar") {
+		if (c.gameObject.tag == "EnemyCar") {
 			Explode();
 		}
 	}
@@ -63,10 +63,10 @@ public class Car_Enemy_Health : MonoBehaviour {
 		isDestroyed = true;
 
 		Instantiate (explosion, transform.position, Quaternion.identity);
-		Destroy (gameObject);
-
-		if (gameObject.tag == "Enemy") {
+		if (gameObject.tag == "EnemyCar") {
+			ScoreSystem.playerScore += 2000;
 			levelProgress.gameStage = GAMESTAGE.FINISH;
 		}
+		Destroy (gameObject);
 	}
 }
