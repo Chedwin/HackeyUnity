@@ -33,6 +33,7 @@ public class PauseMenuHandler : MonoBehaviour {
 	void SetCursorLocked(bool b) {
 		if (b) {
 			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
 		} else {
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;

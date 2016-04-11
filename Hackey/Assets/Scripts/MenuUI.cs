@@ -46,7 +46,7 @@ public class MenuUI : MonoBehaviour {
 	public void StartSingleGame() {
 		panelGameSelect.gameObject.SetActive (false);
 		panelLoading.gameObject.SetActive (true);
-		StartCoroutine (LoadScreen("City"));
+		StartCoroutine (LoadScreen("Town"));
 	}
 
 	public void StartTwoPlayerGame() {
@@ -88,7 +88,21 @@ public class MenuUI : MonoBehaviour {
 	}
 
 
-
+/////////////////////////////////////
+	/// 
+	/// Hurricane Game Engine Prototype Level Loading
+	/// 
+	public void SinglePlayerHurricaneLevel() {
+		panelGameSelect.gameObject.SetActive (false);
+		panelLoading.gameObject.SetActive (true);
+		StartCoroutine(LoadScreen("City[Prototype]"));
+	}
+	public void MultiplayerlayerHurricaneLevel() {
+		panelGameSelect.gameObject.SetActive (false);
+		panelLoading.gameObject.SetActive (true);
+		StartCoroutine(LoadScreen("City[Prototype]"));
+	}
+////////////////////////////////////
 
 
 	/// Loading screen stuff
