@@ -1,0 +1,36 @@
+********************************************************************************
+*                             Initializing Cubiquity                           *
+********************************************************************************
+[13:28:59, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Tests/SmallSphere.vdb'
+[13:29:12, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/VoxeliensTerrain.vdb'
+[13:29:14, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/VoxeliensColoredCubes.vdb'
+[13:32:00, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Planet.vdb'
+[13:32:00, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Planet.vdb'
+[13:32:17, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Planet.vdb'
+[13:32:17, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Planet.vdb'
+[13:32:26, Info   ]: Resizing compressed data buffer to 288486bytes. This should only happen once
+[13:32:26, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Planet.vdb'
+[13:32:26, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/Planet.vdb'
+[13:32:51, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedFromHeightmap.vdb'
+[13:33:15, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:34:28, Info   ]: Resizing compressed data buffer to 144307bytes. This should only happen once
+[13:34:45, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:35:18, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:35:29, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:35:39, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:36:07, Info   ]: Resizing compressed data buffer to 144307bytes. This should only happen once
+[13:36:07, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:36:47, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:36:52, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:36:56, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:38:07, Info   ]: Resizing compressed data buffer to 144307bytes. This should only happen once
+[13:38:07, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:38:09, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:38:24, Info   ]: Resizing compressed data buffer to 144307bytes. This should only happen once
+[13:38:24, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:38:32, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+[13:38:35, Info   ]: Creating voxel database from 'C:/Users/edwin/Documents/GitHub/HackeyUnity/Hackey/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/ImportedCity.vdb'
+********************************************************************************
+*                             Shutting down Cubiquity                          *
+********************************************************************************
+
