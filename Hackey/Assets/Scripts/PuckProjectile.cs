@@ -13,6 +13,7 @@ public class PuckProjectile : MonoBehaviour {
 	void Start () {
 		if (playerAttack.puckState == PuckState.FLAMING){
 			gameObject.GetComponent<ParticleSystem>().enableEmission = true;
+
 		}
 		Destroy (gameObject, 2.0f);
 	}
