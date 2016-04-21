@@ -22,6 +22,9 @@ public class MouseLook : MonoBehaviour {
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
 
+	public float joysensitivityX = 3F;
+	public float joysensitivityY = 3F;
+
 	public float minimumX = -360F;
 	public float maximumX = 360F;
 
@@ -29,7 +32,13 @@ public class MouseLook : MonoBehaviour {
 	public float maximumY = 60F;
 
 	float rotationY = 0F;
-	
+
+
+	public string joyX;
+	public string joyY;
+	public string mouseX;
+	public string mouseY;
+
 	void Start ()
 	{
 		// Make the rigid body not change rotation
@@ -40,21 +49,30 @@ public class MouseLook : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
+		float Xon = Mathf.Abs (Input.GetAxis (joyX));
+		float Yon = Mathf.Abs (Input.GetAxis (joyY));
+
 		if (axes == RotationAxes.MouseXAndY) {
-			float rotationX = transform.localEulerAngles.y + Input.GetAxis ("Mouse X") * sensitivityX;
+			float rotationX = transform.localEulerAngles.y + Input.GetAxis (mouseX) * sensitivityX;
 			
-			rotationY += Input.GetAxis ("Mouse Y") * sensitivityY;
+			rotationY += Input.GetAxis (mouseY) * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
 			transform.localEulerAngles = new Vector3 (-rotationY, rotationX, 0);
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
-			transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+			if (Xon>.05){
+				transform.Rotate(0, Input.GetAxis(joyX) * joysensitivityX, 0);
+			}
+			transform.Rotate(0, Input.GetAxis(mouseX) * sensitivityX, 0);
 		}
 		else
 		{
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			if (Yon>.05){
+				rotationY += Input.GetAxis(joyY) * joysensitivityY;
+			}
+			rotationY += Input.GetAxis(mouseY) * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);

@@ -11,7 +11,7 @@ public class HockeyPlayerHealth : MonoBehaviour {
 		DEAD
 	}
 
-	public int startingHealth = 100;
+	public int startingHealth = 200;
 	public int currentHealth;
 	int redZone;
 
@@ -44,7 +44,7 @@ public class HockeyPlayerHealth : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		nothingtoloseAudio = GetComponent<AudioSource> ();
 		backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
-		currentHealth = startingHealth;
+		//currentHealth = startingHealth;
 		redZone = startingHealth / 4;
 	}
 
@@ -54,7 +54,7 @@ public class HockeyPlayerHealth : MonoBehaviour {
 		mouseLook = GetComponent<MouseLook> ();
 		hockeyplayer = GetComponent<HockeyPlayer> ();
 		playerAttack = GetComponent<HockeyPlayerAttack> ();
-
+		currentHealth = startingHealth;
 		playerHealthState = HealthState.NORMAL;
 
 	}
@@ -128,6 +128,11 @@ public class HockeyPlayerHealth : MonoBehaviour {
 
 		if (c.gameObject.tag == "EnemyCar") {
 			TakeDamage(Car_Enemy_AI.carDamageValue);
+		}
+
+		if (c.gameObject.tag == "Projectile") {
+			int eP = (int)(AttackDamageValue.PUCK);
+			TakeDamage (eP);
 		}
 	}
 

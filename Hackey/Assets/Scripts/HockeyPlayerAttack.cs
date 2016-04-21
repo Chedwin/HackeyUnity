@@ -43,6 +43,11 @@ public class HockeyPlayerAttack : MonoBehaviour {
 	bool shoot;
 	bool melee;
 
+	public string fire1;
+	public string fire2;
+	public string aimmer;
+
+
 	// Use this for initialization
 	void Awake() {
 		anim = GetComponentInParent<Animator> ();
@@ -58,9 +63,9 @@ public class HockeyPlayerAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer += Time.deltaTime;
-		aim = Input.GetButton ("Aim");
-		shoot = Input.GetButton ("Fire1");
-		melee = Input.GetButton ("Fire2");
+		aim = Input.GetButton (aimmer);
+		shoot = Input.GetButton (fire1);
+		melee = Input.GetButton (fire2);
 
 		if (aim) {
 			Aim ();
