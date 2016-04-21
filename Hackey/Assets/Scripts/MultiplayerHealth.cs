@@ -137,7 +137,7 @@ public class MultiplayerHealth : MonoBehaviour {
 		isDead = true;
 		TogglePlayer (false);
 		score--;
-		scoreText.text = "SCORE: " + score;
+		scoreText.text = "LIVES: " + score;
 		CheckWhichPlayer ();
 
 		if (score > 0) {
