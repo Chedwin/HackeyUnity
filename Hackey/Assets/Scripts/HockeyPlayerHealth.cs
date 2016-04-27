@@ -42,9 +42,9 @@ public class HockeyPlayerHealth : MonoBehaviour {
 
 	void Awake() {
 		anim = GetComponent<Animator> ();
-		//nothingtoloseAudio = GetComponent<AudioSource> ();
-		//backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
-		//currentHealth = startingHealth;
+		nothingtoloseAudio = GetComponent<AudioSource> ();
+		backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
+		currentHealth = startingHealth;
 		redZone = startingHealth / 4;
 	}
 

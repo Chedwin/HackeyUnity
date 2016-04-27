@@ -16,7 +16,7 @@ public class PauseMenuHandler : MonoBehaviour {
 
 	void Awake() {
 		hud = GameObject.Find ("UI_HUD_Canvas");
-		coachsCornerAudio = GetComponent<AudioSource> ();
+		//coachsCornerAudio = GetComponent<AudioSource> ();
 		backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
 
 		playerHealth = GameObject.FindGameObjectWithTag ("Player").GetComponent<HockeyPlayerHealth> ();
