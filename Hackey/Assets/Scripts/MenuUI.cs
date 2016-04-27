@@ -100,7 +100,7 @@ public class MenuUI : MonoBehaviour {
 	public void MultiplayerlayerHurricaneLevel() {
 		panelGameSelect.gameObject.SetActive (false);
 		panelLoading.gameObject.SetActive (true);
-		StartCoroutine(LoadScreen("City[Prototype]"));
+		StartCoroutine(LoadScreen("Rink[Prototype]"));
 	}
 ////////////////////////////////////
 
