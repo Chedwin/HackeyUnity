@@ -34,9 +34,13 @@ public class PuaseMenuPrototype : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButton(pauseButton) && !isPaused && (!playerHealth.isDead))
+        if (Input.GetButton(pauseButton) && (!playerHealth.isDead))
         {
-            Pause();
+            if (!isPaused) {
+                Pause();
+                return;
+            }
+            Resume();
         }
     }
 
