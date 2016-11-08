@@ -6,18 +6,20 @@ public class PauseMenuHandler : MonoBehaviour {
 
 	GameObject hud;
 	public RectTransform pause;
-	public AudioSource coachsCornerAudio;
-	public AudioSource backgroundMusic;
+	AudioSource coachsCornerAudio;
+	AudioSource backgroundMusic;
 
 	public HockeyPlayerHealth playerHealth;
 	public LevelProgress levelProgress;
 	
 	bool isPaused;
 
+    public string pauseButton;
+
 	void Awake() {
 		hud = GameObject.Find ("UI_HUD_Canvas");
-		//coachsCornerAudio = GetComponent<AudioSource> ();
-		backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
+        coachsCornerAudio = GetComponent<AudioSource>();
+        backgroundMusic = GameObject.Find ("BackgroundMusicManager").GetComponent<AudioSource> ();
 
 		playerHealth = GameObject.FindGameObjectWithTag ("Player").GetComponent<HockeyPlayerHealth> ();
 		levelProgress = GameObject.Find ("LevelProgressionSystem").GetComponent<LevelProgress> ();
@@ -41,7 +43,7 @@ public class PauseMenuHandler : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetButton ("Escape") && !isPaused && 
+		if (Input.GetButton (pauseButton) && !isPaused && 
 			(levelProgress.gameStage != GAMESTAGE.FINISH)   &&  (!playerHealth.isDead) )
 		{
 			Pause ();

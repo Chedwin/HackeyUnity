@@ -91,25 +91,25 @@ public class HockeyPlayerAttack : MonoBehaviour {
 	void FlamingPuckTimer() {
 		flamingPuckTimer += Time.deltaTime;
 		int timeLeft = (int)(flamingPuckTimeLimit - flamingPuckTimer);
-		flamingPuckTimerText.text = timeLeft + " seconds left";
-
-		if (timeLeft <= 10) {
-			flamingPuckTimerText.color = Color.red;
-		}
+        flamingPuckTimerText.text = timeLeft + " seconds left";
+        //Debug.Log(flamingPuckTimerText.text);
+        if (timeLeft <= 10) {
+            flamingPuckTimerText.color = Color.red;
+        }
 
 		if (flamingPuckTimer >= flamingPuckTimeLimit) {
 			puckState = PuckState.NORMAL;
 			flamingPuckTimer = 0.0f;
-			flamingPuckTimerText.text = "";
-			flamingPuckTimerText.color = Color.white;
-		}
+            flamingPuckTimerText.text = "";
+            flamingPuckTimerText.color = Color.white;
+        }
 	}
 
 	void KlefbombTimer() {
 		klefbombTimer += Time.deltaTime;
 		int timeLeft = (int)(flamingPuckTimeLimit - klefbombTimer);
 
-		flamingPuckTimerText.text = timeLeft + " UNLEASH THE KLEFBOMB!";
+		//flamingPuckTimerText.text = timeLeft + " UNLEASH THE KLEFBOMB!";
 		if (timeLeft <= 10) {
 			flamingPuckTimerText.color = Color.red;
 		}
@@ -123,8 +123,8 @@ public class HockeyPlayerAttack : MonoBehaviour {
 	}
 	
 	void Aim() {
-		crosshair.enabled = true;
-	}
+        crosshair.enabled = true;
+    }
 	
 	void Melee() {
 		timer = 0.0f;
