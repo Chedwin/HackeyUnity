@@ -22,6 +22,7 @@ public class MultiplayerManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1.0f;
 		scores = new int[]{ p1Score, p2Score, p3Score, p4Score };
 		gameTime = 0;
 	}

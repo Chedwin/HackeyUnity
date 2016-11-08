@@ -43,12 +43,16 @@ public class PauseMenuHandler : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetButton (pauseButton) && !isPaused && 
-			(levelProgress.gameStage != GAMESTAGE.FINISH)   &&  (!playerHealth.isDead) )
+		if (Input.GetButton (pauseButton) && (levelProgress.gameStage != GAMESTAGE.FINISH)   &&  (!playerHealth.isDead) )
 		{
-			Pause ();
+            if (!isPaused)
+            {
+                Pause();
+                return;
+            }
+			Resume();
 		}
-	}
+    }
 	
 
 	public void QuitGame() {
